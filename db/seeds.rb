@@ -1,3 +1,11 @@
+3.times do |topic|
+    Topic.create!(
+      title: "Topic #{topic}"
+      )
+end
+
+puts "3 topics created"
+
 10.times do |blog|
   Blog.create!(
       title: "MY BLOG POST #{blog}", 
@@ -5,7 +13,8 @@
       bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
       bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
       bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-      bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      topic_id: Topic.last.id
     )
 end
 
@@ -20,10 +29,24 @@ puts "10 blog posts created"
   
 puts "5 skills created"
   
-  9.times do |portfolio_item|
+  8.times do |portfolio_item|
     Portfolio.create!(
       title: "Portfolio title: #{portfolio_item}",
-      subtitle: "MY GREAT SERVICE", 
+      subtitle: "Ruby on Rails", 
+      body: "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      main_image: "http://via.placeholder.com/600x400",
+      thumb_image: "http://via.placeholder.com/350x200"
+      )
+  end
+  
+  1.times do |portfolio_item|
+    Portfolio.create!(
+      title: "Portfolio title: #{portfolio_item}",
+      subtitle: "Angular", 
       body: "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
       bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
       bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
@@ -35,3 +58,5 @@ puts "5 skills created"
   end
   
  puts "9 portfolio items created"
+ 
+ 
