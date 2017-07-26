@@ -16,4 +16,7 @@ module ApplicationHelper
     end 
   end
   
+  def copyright_generator
+    RottlaenderViewTool::Renderer.copyright 'Alex Rottlaender', 'All Rights Reserved'
+  end
 end
